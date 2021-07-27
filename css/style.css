@@ -1,0 +1,709 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style-type: none;
+}
+.container{
+    width:1250px;
+    margin:0 auto;
+
+}
+
+/*------preloader part goes here------*/
+
+.preloader{
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: violet;
+    width:100%;
+    height:100%;
+    z-index: 999999;
+
+
+}
+
+.load{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);
+    /*change these sizes to fit into your project*/
+    width:100px;
+    height:100px;
+  }
+  .load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
+  
+  .load :first-child{background:#19A68C;animation-delay:-1.5s}
+  .load :nth-child(2){background:#F63D3A;animation-delay:-1s}
+  .load :nth-child(3){background:#FDA543;animation-delay:-0.5s}
+  .load :last-child{background:#193B48}
+  
+  @keyframes spin{
+    0%,100%{transform:translate(0)}
+    25%{transform:translate(160%)}
+    50%{transform:translate(160%, 160%)}
+    75%{transform:translate(0, 160%)}
+  }
+
+/*.loader{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}*/
+
+/*------Navbar part goes here----------*/
+
+.nav{
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:999;
+
+}
+
+.bg{
+    background-color: teal;
+    position:fixed;
+    animation: bg 1s;
+}
+
+@keyframes bg{
+    from{ top:-50px}
+    to{ top:0}
+}
+
+
+.navbar{
+    display: flex;
+
+}
+.logo{
+    width:350px;
+}
+.logo img{
+    padding-top: 10px;
+}
+
+.menu{
+    width:900px;
+
+}
+.menu ul{
+    text-align: right;
+}
+.menu ul li{
+    display: inline-block;
+    padding-left: 52px;
+
+    
+}
+
+.menu ul li a{
+    line-height: 110px;
+    
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 21px;
+    font-weight: 700;    
+    color: #ffffff;
+    text-transform:capitalize;
+    position: relative;
+    display: block;
+}
+
+.menu ul li a::after{
+    position:absolute;
+    content:'';
+    top:0;
+    left:0;
+    width:0;
+    height:3px;
+    background-color: #c8c5bd;
+    opacity:0;
+    transition: all linear .3s;
+
+}
+
+ .menu ul li a:hover::after{
+    opacity:1;
+    width:100%;
+}
+/*----------banner part goes here------------------*/
+
+
+#banner{
+    background: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+
+.banner{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+.text{
+    text-align: center;
+}
+.text h1{
+     font-family: 'Yeseva One', cursive;
+     font-size: 90px;
+     font-weight: 400;
+     color:#ffffff;
+     padding:0 100px;
+     line-height: 115px;
+     
+}
+
+.text img{
+    padding-top: 22px;
+}
+
+.tag{
+    padding-top: 49px;
+}
+.tag a{
+    border:1px solid #d2cdbb;
+    height:56px;
+    width:226px;
+    padding:22px 51px;
+    font-family: 'Lato', sans-serif;
+    font-size:18px;
+    font-weight:400;
+    color:#ffffff;
+    background-color: rgba(255, 255, 255, 0.28);
+    margin:0 12px;
+}
+
+.tag a:hover{
+    background-color: rgba(0,0,0,0.28);
+
+}
+
+/*-------food part goes here-------*/
+
+#food{
+    background:url(../images/food.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+
+.food-main{
+    display:flex;
+    justify-content: space-between;
+    
+}
+.left{
+    text-align: center;
+}
+
+.left h3{
+    padding-top: 80px;
+    font-family: 'Yeseva One', cursive;
+    font-size: 36px;
+    font-weight: 400;
+    color:#cc9900;
+    
+
+}
+
+.left img{
+    padding-top: 17px;
+    padding-bottom: 20px;
+}
+
+
+.left p{
+    font-family: 'Lato', sans-serif;
+    font-size:16px;
+    font-weight:400;
+    color:#4c4c4c;
+    padding:0 100px;
+    line-height: 24px;
+}
+
+.left-logo{
+    padding-top: 23px;
+}
+
+.right img{
+    padding-top: 40px;
+
+}
+
+
+/*---------ingredients part goes here-----------*/
+
+#ingredients{
+    background: url(../images/ingredients.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+
+}
+.ingredients-main{
+        display:flex;
+        justify-content:flex-end;
+        align-items:center;
+        height:100vh;
+
+}
+
+.ingredients-item{
+    height:560px;
+    width:566px;
+    background-color:rgba(0, 0, 0, 0.295);
+    margin-right: 45px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.ingredients-item h3{
+    font-family: 'Yeseva One', cursive;
+    font-size: 36px;
+    font-weight: 400;
+    color:#ffffff;
+    padding-top: 42px;
+
+}
+
+.ingredients-item img{
+    padding-top: 15px;
+}
+
+.ingredients-item p{
+    margin-top: 15px;
+    font-family: 'Lato', sans-serif;
+    font-size:16px;
+    font-weight:400;
+    color:#ffffff;
+    padding:0 60px;
+    line-height: 24px;
+}
+
+.ingredients-menu{
+    display:flex;
+    justify-content:center;
+    margin-top:47px;
+    
+    
+}
+
+.ingredients-pic{
+    height:100px;
+    width:100px;
+    border-radius: 50%;
+
+}
+
+.chili{
+    margin:0 30px;
+}
+
+/*-------------pattern part goes here---------------*/
+
+#pattern{
+    background:url(../images/pattern.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100%;
+    
+    
+}
+
+.pattern{
+   
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 110px;
+    height: 100%;
+
+
+}
+
+
+
+.pattern-header{
+     text-align: center;
+     padding-top: 15px;
+
+}
+
+.pattern-header h3{
+    font-family: 'Yeseva One', cursive;
+    font-size: 36px;
+    font-weight: 400;
+    color:#cc9900;
+
+}
+
+.pattern-header img{
+    padding-top: 10px;
+}
+
+.pattern-menu{
+
+    width:435px;
+    
+    padding-top: 20px;
+
+    /*padding-bottom: 10px;*/
+}
+
+.pattern-menu h3{
+    font-family: 'Yeseva One', cursive;
+    font-size: 21px;
+    font-weight: 400;
+    color:#c89f2d;
+
+    border-bottom: 1px solid #c89f2d;
+    padding-bottom: 10px;
+
+}
+
+.pattern-menu span{
+    float:right;
+}
+
+.pattern-menu p{
+    font-family: 'Lato', sans-serif;
+    font-size:16px;
+    font-weight:400;
+    color:#4c4c4c;
+    padding-top:14px;
+
+}
+
+
+
+
+
+
+/*----------------review part goes here----------------*/
+
+#review{
+    background: url(../images/review.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+    
+}
+
+.review-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+.review-item{
+    width:770px;
+    height:550px;
+    background-color:rgba(0, 0, 0, 0.562);
+    text-align: center;
+}
+
+.review-item h3{
+    text-transform: capitalize;
+    padding-top: 60px;
+    font-family: 'Yeseva One', cursive;
+    font-size: 36px;
+    font-weight: 400;
+    color:#ffffff;
+
+}
+
+.review-item img{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.review-item p{
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 23px;
+    font-weight: 400;    
+    color: #dde0df;
+    padding:0 80px;
+    line-height: 35px;
+}
+
+.review-item h4{
+    padding-top: 35px;
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 20px;
+    font-weight: 400;    
+    color: #dde0df;
+}
+
+/*-----------form part goes here-------------*/
+
+#form{
+    background: url(../images/food.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100%;
+}
+
+/*.form-main{
+    padding-top: 80px;
+}
+*/
+
+.form-item{
+    display:flex;
+    justify-content: space-between;
+}
+
+.form-left{
+    display:flex;
+    justify-content: space-between;
+    
+    padding:80px 40px 80px 30px;
+    
+}
+
+.form-pic1{
+    margin:0 10px;
+    
+    width:270px;
+}
+
+.form-right{
+    padding-top: 80px;
+
+}
+
+
+.form-heading{
+    text-align: center;
+}
+
+.form-heading h2{
+
+    font-family: 'Yeseva One', cursive;
+    font-size: 36px;
+    font-weight: 400;
+    color:#cc9900;
+}
+
+
+.form-right img{
+    padding:13px 0;
+}
+
+.form-right p{
+
+    font-family: 'Lato', sans-serif;
+    font-size:16px;
+    font-weight:400;
+    color:#4c4c4c;
+    line-height: 30px;
+    padding:0 90px;
+    margin-bottom: 3px;
+}
+
+.form-content{
+    display:flex;
+    justify-content: space-between;
+    padding:22px 80px;
+     
+}
+
+.content-item h3{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color:#c9a131;
+    text-transform: capitalize;
+    padding-bottom: 8px;
+}
+
+.content-item input{
+    width:200px;
+    height:36px;
+    border:1px solid #c8c6c6;
+    padding-left: 14px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color:#7c7c7c;
+
+}
+
+input::placeholder{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color:#7c7c7c;
+    font-style: italic;
+
+}
+
+.content-item form{
+    position:relative;
+}
+
+.content-item form i{
+    position:absolute;
+    top:0;
+    right:0;
+    padding:10px 14px;
+    font-size: 12px;
+}
+
+
+
+.mina{
+    padding-top: 21px;
+}
+
+.btn{
+
+    margin:8px 200px;
+    width:200px;
+    height:35px;
+    border:1px solid #c9a131;
+    text-align: center;
+    background-color:#c9a131;
+    padding:4px;
+
+}
+
+.btn a{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color:#ffff;
+}
+
+
+/*back-to top part goes here*/
+
+.back-To-Top{
+    position:fixed;
+    right:15px;
+    bottom:15px;
+    z-index: 9999;
+    cursor:pointer;
+    display:none;
+}
+
+.back-To-Top i{
+    width: 40px;
+    height:40px;
+    background-color: tomato;
+    color:white;
+    line-height: 40px;
+    text-align:center;
+    border-radius: 50%;
+
+}
+
+/*------footer part goes here---------*/
+
+footer{
+    padding-top: 50px;
+    padding-bottom: 70px;
+    background-color:#191919;
+    width:100%;
+}
+
+.foot-main{
+    display:flex;
+    justify-content: space-between;
+
+
+}
+
+
+
+.foot-item{
+    text-align: center;
+    width:390px;
+
+}
+
+.item1{
+    margin-left: 50px;
+    
+}
+
+.foot-item h3{
+
+    font-family: 'Yeseva One', cursive;
+    font-size: 21px;
+    font-weight: 400;
+    color:#fefefe;
+    text-transform:capitalize;
+}
+
+
+
+.foot-item img{
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+}
+
+.item1 p {
+    font-family: 'Chelsea Market', cursive;
+    font-size: 16px;
+    font-weight: 400;
+    color:#fff;
+    line-height: 34px;
+    
+   
+}
+
+.foot-para2 p{
+     font-family: 'Open Sans', sans-serif;
+     font-size: 16px;
+     font-weight: 400;
+     color:#fff;
+     line-height: 24px;
+
+}
+
+.foot-para2 img{
+    padding-top: 46px;
+}
+
+.foot-para3 p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color:#fff;
+    line-height: 24px;
+
+
+}
+
+.social-media{
+    font-size:16px;
+}
+
+.social-media i{
+    padding-top: 46px;
+    color:#fff;
+
+}
+
+.tina{
+    padding:0 10px;
+}
+
+
